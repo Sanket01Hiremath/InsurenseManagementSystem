@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.FutureOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -22,12 +21,12 @@ public class Claim {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer claimId;
-	@Length(min=4,max=20)
+	@Length(min=4,max=50)
 	private String description;
 	@JsonFormat(pattern = "dd/mm/yyyy")
 	private Date claimDate=new Date();
 	@JsonProperty(access = Access.READ_ONLY)
-	private boolean claimStatus;
+	private ClaimStatus claimStatus;
 	
 	@OneToOne
 	@JsonProperty(access = Access.READ_ONLY)

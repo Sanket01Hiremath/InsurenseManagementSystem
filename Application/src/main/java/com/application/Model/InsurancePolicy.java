@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Min;
@@ -32,7 +33,11 @@ public class InsurancePolicy {
 	@JsonFormat(pattern = "dd/mm/yyyy")
 	private Date endDate;
 	
-	@OneToOne
+	@ManyToOne
 	@JsonProperty(access = Access.READ_ONLY)
 	private Client policyHolder;
+	
+//	@OneToOne
+//	@JsonProperty(access = Access.READ_ONLY)
+//	private Claim claim;
 }

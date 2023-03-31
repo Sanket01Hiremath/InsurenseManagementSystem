@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.application.Exception.ClaimNotFoundException;
+import com.application.Exception.PolicyNotFoundException;
 import com.application.Model.Claim;
 import com.application.Service.ClaimServices;
 
@@ -39,8 +41,8 @@ public class ClaimController {
 	}
 	
 	@PostMapping("/claims")
-	public ResponseEntity<Claim> newClient(@Valid @RequestBody Claim c){
-		Claim saved=claimService.newClaim(c);
+	public ResponseEntity<Claim> newClient(@Valid @RequestBody Claim c,@RequestParam Integer pid ) throws PolicyNotFoundException{
+		Claim saved=claimService.newClaim(c,pid);
 		return new ResponseEntity<>(saved,HttpStatus.CREATED);
 	}
 	

@@ -40,7 +40,6 @@ public class ClientController {
 	
 	@PostMapping("/clients")
 	public ResponseEntity<Client> newClient(@Valid @RequestBody Client c){
-		System.out.println(c.getDob());
 		Client saved=clientService.newClient(c);
 		return new ResponseEntity<>(saved,HttpStatus.CREATED);
 	}

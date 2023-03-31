@@ -4,8 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.application.Exception.ClientNotFoundException;
 import com.application.Exception.PolicyNotFoundException;
+import com.application.Model.Client;
 import com.application.Model.InsurancePolicy;
+import com.application.Repository.ClientRepository;
 import com.application.Repository.InsurancePolicyRepository;
 
 @Service
@@ -13,6 +17,8 @@ public class InsurancePolicyServiceImpl implements InsurancePolicyServices{
 	
 	@Autowired
 	private InsurancePolicyRepository policyRepo;
+	@Autowired
+	private ClientRepository clientRepo;
 	
 	@Override
 	public List<InsurancePolicy> getPolicies() throws PolicyNotFoundException {
@@ -30,7 +36,9 @@ public class InsurancePolicyServiceImpl implements InsurancePolicyServices{
 	}
 
 	@Override
-	public InsurancePolicy newPolicy(InsurancePolicy p) {
+	public InsurancePolicy newPolicy(InsurancePolicy p,Integer cid) throws ClientNotFoundException {
+		Client found=clientRepo.findById(cid).orElseThrow(()-> new ClientNotFoundException("Client Not Found!"));
+		p.setPolicyHolder(found);
 		return policyRepo.save(p);
 	}
 

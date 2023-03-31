@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.application.Exception.ClientNotFoundException;
 import com.application.Exception.PolicyNotFoundException;
 import com.application.Model.InsurancePolicy;
 import com.application.Service.InsurancePolicyServices;
@@ -39,8 +41,8 @@ public class PolicyController {
 	}
 	
 	@PostMapping("/policies")
-	public ResponseEntity<InsurancePolicy> newClient(@Valid @RequestBody InsurancePolicy P){
-		InsurancePolicy saved=policyService.newPolicy(P);
+	public ResponseEntity<InsurancePolicy> newClient(@Valid @RequestBody InsurancePolicy P,@RequestParam Integer Cid) throws ClientNotFoundException{
+		InsurancePolicy saved=policyService.newPolicy(P,Cid);
 		return new ResponseEntity<>(saved,HttpStatus.CREATED);
 	}
 	

@@ -2,6 +2,7 @@ package com.application.Model;
 
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 import javax.validation.constraints.Past;
@@ -30,18 +31,11 @@ public class Client {
 	@Length(min=10,max=10)
 	private String phone;
 	
-	@OneToOne
-	@JsonProperty(access = Access.READ_ONLY)
-	private InsurancePolicy policy;
-	@OneToOne
-	@JsonProperty(access = Access.READ_ONLY)
-	private Claim claim;
-	
-//	@OneToMany(mappedBy = "clientId")
+//	@OneToMany
 //	@JsonProperty(access = Access.READ_ONLY)
 //	private List<InsurancePolicy> policies;
 //	
-//	@OneToMany(mappedBy = "clientId")
+//	@OneToMany
 //	@JsonProperty(access = Access.READ_ONLY)
 //	private List<Claim> claims;
 }

@@ -26,6 +26,7 @@ public class ClientServiceImpl implements ClientServices{
 
 	@Override
 	public Client getClient(Integer Id) throws ClientNotFoundException{
+		
 		Client found=clientRepo.findById(Id).orElseThrow(()-> new ClientNotFoundException("Client Not Found!"));
 		return found;
 	}

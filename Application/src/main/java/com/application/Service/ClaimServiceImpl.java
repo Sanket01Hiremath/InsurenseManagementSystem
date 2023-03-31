@@ -6,14 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.application.Exception.ClaimNotFoundException;
+import com.application.Exception.PolicyNotFoundException;
 import com.application.Model.Claim;
+import com.application.Model.InsurancePolicy;
 import com.application.Repository.ClaimRepository;
+import com.application.Repository.InsurancePolicyRepository;
 
 @Service
 public class ClaimServiceImpl implements ClaimServices{
 
 	@Autowired
 	private ClaimRepository claimRepo;
+	@Autowired
+	private InsurancePolicyRepository policyRepo;
 	
 	@Override
 	public List<Claim> getClaims() throws ClaimNotFoundException {
@@ -31,7 +36,10 @@ public class ClaimServiceImpl implements ClaimServices{
 	}
 
 	@Override
-	public Claim newClaim(Claim c) {
+	public Claim newClaim(Claim c,Integer pid) throws PolicyNotFoundException {
+		InsurancePolicy found=policyRepo.findById(pid).orElseThrow(()-> new PolicyNotFoundException("Policy Not Found!"));
+		c.setPolicy(found);
+		c.setClaimStatus(c.getClaimStatus());
 		return claimRepo.save(c);
 	}
 
