@@ -28,3 +28,4 @@ C. Claims:</br></br></br>
       --> POST /api/claims?pid: Create a new claim of a policy.</br></br>
       --> PUT /api/claims/{id}: Update a claim's information.</br></br>
       --> DELETE /api/claims/{id}: Delete a claim</br></br></h2>
+ [![MySQL](https://img.shields.io/badge/-mysql-000000?style=flat&logo=mysql)]
