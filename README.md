@@ -7,7 +7,11 @@ policies, clients, and claims using Spring Boot and Java.</h3></br>
 
 Features: Basic Authentication,Relational Mapping, Validation,Custom Checked Exceptions, Spring Data JPA</h2></br></br>
 <hr>
-<h2>Implementation of RESTful APIs:</br></br>
+<h2>Implementation of RESTful APIs:</br>
+[UserId: Admin,Password: Admin]</br>
+[Note: If You want to Change the username,password,DatabaseName go to src/main/resources/application.properties]
+</br>
+
 A. Clients:</br></br></br>
       --> <img src="https://img.shields.io/badge/-GET-000000?style=flat&logo=operation&color=blue" style="width:50px;"> --> /api/clients       : Fetch all clients.</br></br>
       --> <img src="https://img.shields.io/badge/-GET-000000?style=flat&logo=operation&color=blue" style="width:50px;"> --> /api/clients/{id}  : Fetch a specific client by ID.</br></br>
@@ -27,6 +31,8 @@ C. Claims:</br></br></br>
       --> <img src="https://img.shields.io/badge/-GET-000000?style=flat&logo=operation&color=blue" style="width:50px;"> -->/api/claims/{id}: Fetch a specific claim by ID.</br></br> 
       --> <img src="https://img.shields.io/badge/-POST-000000?style=flat&logo=operation&color=green" style="width:50px;"> --> /api/claims?pid: Create a new claim of a policy.</br></br>
       --> <img src="https://img.shields.io/badge/-PUT-000000?style=flat&logo=operation&color=orange" style="width:50px;"> -->  /api/claims/{id}: Update a claim's information.</br></br>
-      --> <img src="https://img.shields.io/badge/-DELETE-000000?style=flat&logo=operation&color=red" style="width:50px;"> -->  /api/claims/{id}: Delete a claim</br></br></h2>
+      --> <img src="https://img.shields.io/badge/-DELETE-000000?style=flat&logo=operation&color=red" style="width:50px;"> -->  /api/claims/{id}: Delete a claim</br></br>
+</br>
+</br>
 
-<!--<img src="https://img.shields.io/badge/-GET-000000?style=flat&logo=operation&color=green" style="width:100px;">-->
+For More Information CONTACT ME ---> [<img src="https://img.shields.io/badge/-Portfolio-000000?style=flat&logo=operation&color=green" style="width:60px;">](https://Sanket01Hiremath.github.io/) [![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/Sanket01Hiremath/) [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:sankethrmth1234@gmail.com)</h2>
