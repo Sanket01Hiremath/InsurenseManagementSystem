@@ -5,7 +5,7 @@ policies, clients, and claims using Spring Boot and Java.</h3></br>
 <h1>Tech Stack:<h1> <img src="https://img.shields.io/badge/-java-000000?style=flat&logo=operation" style="width:100px;"> <img src="https://img.shields.io/badge/-spring-000000?style=flat&logo=Spring" style="width:200px;"> <img src="https://img.shields.io/badge/-mySQL-000000?style=flat&logo=MySQL" style="width:200px;"></h2></br>
 <h1>Tools Used:<h1> STS, POSTMAN
 </br></br>
-<h2>This Application is A Demonstration of Creating A RestAPI using String and Performing CRUD Operations</br></br>
+<h2>This Application is A Demonstration of Creating A RestAPI using Spring and Performing CRUD Operations</br></br>
 
 Features: Basic Authentication,Relational Mapping, Validation,Custom Checked Exceptions, Spring Data JPA</h2></br></br>
 <hr>
