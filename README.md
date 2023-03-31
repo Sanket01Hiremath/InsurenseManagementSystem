@@ -25,7 +25,7 @@ B. Insurance Policies:</br></br></br>
 C. Claims:</br></br></br>
       --> <img src="https://img.shields.io/badge/-GET-000000?style=flat&logo=operation&color=blue" style="width:50px;"> -->/api/claims: Fetch all claims.</br></br>
       --> <img src="https://img.shields.io/badge/-GET-000000?style=flat&logo=operation&color=blue" style="width:50px;"> -->/api/claims/{id}: Fetch a specific claim by ID.</br></br> 
-      --><img src="https://img.shields.io/badge/-POST-000000?style=flat&logo=operation&color=green" style="width:50px;"> --> /api/claims?pid: Create a new claim of a policy.</br></br>
+      --> <img src="https://img.shields.io/badge/-POST-000000?style=flat&logo=operation&color=green" style="width:50px;"> --> /api/claims?pid: Create a new claim of a policy.</br></br>
       --> <img src="https://img.shields.io/badge/-PUT-000000?style=flat&logo=operation&color=orange" style="width:50px;"> -->  /api/claims/{id}: Update a claim's information.</br></br>
       --> <img src="https://img.shields.io/badge/-DELETE-000000?style=flat&logo=operation&color=red" style="width:50px;"> -->  /api/claims/{id}: Delete a claim</br></br></h2>
 
